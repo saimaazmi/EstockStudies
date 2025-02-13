@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Centered Modal Form</title>
+<style>
+.modal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+input[type="text"], input[type="tel"] {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+</style>
+</head>
+<body>
+
+<div class="form-modal" id="modal">
+<div class="form-modal-content">
+<form>
+<label for="name">Name:</label><br>
+<input type="text" id="name" name="name"><br>
+<label for="phone">Phone:</label><br>
+<input type="tel" id="phone" name="phone"><br><br>
+<input type="submit" value="Submit">
+</form>
+</div>
+</div>
+
+<button onclick="document.getElementById('modal').style.display='block'">Open Form</button>
+
+</body>
+</html>
